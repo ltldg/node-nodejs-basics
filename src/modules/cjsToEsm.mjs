@@ -1,6 +1,6 @@
-const path = require('path');
-const { release, version } = require('os');
-const { createServer: createServerHttp } = require('http');
+import path from 'path';
+import { release, version } from 'os';
+import { createServer, createServerHttp } from 'http';
 require('./files/c');
 
 const random = Math.random();
@@ -33,7 +33,7 @@ myServer.listen(PORT, () => {
     console.log('To terminate it, use Ctrl+C combination');
 });
 
-module.exports = {
+export {
     unknownObject,
     myServer,
 };
